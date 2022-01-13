@@ -18,6 +18,7 @@ contract Transactions{
 
   function addToBlockChain() public {
     traansactionsCount+=1;
+    //1:15:03
   }
 
   function getAllTransactions() public view  returns(TransferStruct[] memory){
