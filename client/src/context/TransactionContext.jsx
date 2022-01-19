@@ -18,10 +18,11 @@ const getEthreumContract = () => {
     })
 }
 
-export const TransactionProvider = ({children}) => {
+export const TransactionProvider = ({ children }) => {
+    //1:43:07
     return (
-        <TransactionContext.Provider>
+        <TransactionContext.Provider value={{value:'test'}}>
             {children}
         </TransactionContext.Provider>
-    )
+    );
 }
