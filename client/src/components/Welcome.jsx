@@ -20,12 +20,12 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const { value } = useContext(TransactionContext);
-  const connectWallet = () => {};
+  const { connectWallet,currentAccount } = useContext(TransactionContext);
+  
   const handleSubmit = () => {};
 
 
-  console.log("===========value=============",value)
+  // console.log("===========value=============",value)
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
@@ -37,16 +37,18 @@ const Welcome = () => {
             Explore the Crypto world. Buy and Sell cryptocurrencies easily on
             Krypto
           </p>
-          <button
+          {!currentAccount && <button
             type="button"
-            onClick={connectWallet}
+            onClick={
+              connectWallet
+            }
             className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
           >
             <p className="text-white text-base font-semibold ">
               {" "}
               Connect Wallet
             </p>
-          </button>
+          </button>}
 
           <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${commonStyles}`}>Reliability</div>
