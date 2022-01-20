@@ -21,7 +21,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 const Welcome = () => {
   const { connectWallet,currentAccount } = useContext(TransactionContext);
-  
+  // 1:50:29
   const handleSubmit = () => {};
 
 
